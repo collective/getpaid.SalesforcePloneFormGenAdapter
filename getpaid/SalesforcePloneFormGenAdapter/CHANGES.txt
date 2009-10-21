@@ -2,7 +2,7 @@
 CHANGES
 =======
 
-1.6 (unreleased)
+1.6 (2009-10-21)
 ----------------
 
  - Fix bug in error handling if Salesforce object creation for order fails.
