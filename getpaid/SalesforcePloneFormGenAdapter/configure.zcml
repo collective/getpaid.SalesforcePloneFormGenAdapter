@@ -16,7 +16,7 @@
   <subscriber
      handler=".content.getpaidpfgsalesforceadapter.handleOrderWorkflowTransition"
      for="getpaid.core.interfaces.IOrder
-          hurry.workflow.interfaces.IWorkflowTransitionEvent"
+          getpaid.hurry.workflow.interfaces.IWorkflowTransitionEvent"
      />
 
   <gs:registerProfile

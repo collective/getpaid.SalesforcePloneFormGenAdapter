@@ -44,8 +44,8 @@ from Products.salesforcepfgadapter.content.salesforcepfgadapter import Salesforc
 # Get Paid events
 from getpaid.core.interfaces import workflow_states, IShoppingCartUtility, IShippableOrder, IShippingRateService, IShippableLineItem
 from getpaid.core import interfaces
-from zope.app.component.hooks import getSite
-from zope.app.annotation.interfaces import IAnnotations
+from zope.component.hooks import getSite
+from zope.annotation.interfaces import IAnnotations
 
 
 logger = logging.getLogger("GetPaidPFGSalesforce")

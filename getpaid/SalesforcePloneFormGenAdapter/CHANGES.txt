@@ -5,7 +5,14 @@ CHANGES
 1.8 (unreleased)
 ----------------
 
+- Use getpaid.hurry.workflow for compatibility with other updated getpaid packages.
+  [davisagli]
+
+- Update imports for compatibility with Plone 4.3.
+  [davisagli]
+
 - Fix bug in splitting name.
+  [davisagli]
 
 1.7 (2010-04-21)
 ----------------
