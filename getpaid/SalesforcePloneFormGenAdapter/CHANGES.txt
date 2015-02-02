@@ -6,6 +6,7 @@ CHANGES
 ----------------
 
 - Fix install method to correctly detect Plone 4.x versions.
+  [fulv]
 
 - Use getpaid.hurry.workflow for compatibility with other updated getpaid packages.
   [davisagli]
