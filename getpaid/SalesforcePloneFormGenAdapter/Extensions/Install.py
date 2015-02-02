@@ -1,5 +1,5 @@
 from getpaid.SalesforcePloneFormGenAdapter.config import PROJECTNAME
-from getpaid.SalesforcePloneFormGenAdapter import HAS_PLONE25, HAS_PLONE30
+from getpaid.SalesforcePloneFormGenAdapter import HAS_PLONE25, HAS_PLONE30, HAS_PLONE4
 
 from Products.CMFCore.utils import getToolByName
 from Products.CMFCore.permissions import ManagePortal
@@ -25,15 +25,16 @@ def install(self):
     # so that our product works w/ the Quick Installer in Plone 2.5.x
     print >> out, "Installing GetPaidPFGSalesforceAdapter"
     setup_tool = getToolByName(self, 'portal_setup')
-    if HAS_PLONE30:
+    if HAS_PLONE30 or HAS_PLONE4:
         setup_tool.runAllImportStepsFromProfile(
                 "profile-getpaid.SalesforcePloneFormGenAdapter:default",
                 purge_old=False)
-    else:
+    elif HAS_PLONE25:
         old_context = setup_tool.getImportContextID()
         setup_tool.setImportContext('profile-getpaid.SalesforcePloneFormGenAdapter:default')
         setup_tool.runAllImportSteps()
-        setup_tool.setImportContext(old_context)
+        setup_tool.setImportContext(old_context)        
+
     print >> out, "Installed types and added to portal_factory via portal_setup"
     
     

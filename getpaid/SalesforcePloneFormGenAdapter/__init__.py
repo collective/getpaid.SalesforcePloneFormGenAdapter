@@ -69,3 +69,9 @@ except ImportError:
     HAS_PLONE30 = False
 else:
     HAS_PLONE30 = True
+try:
+    # Plone 4 and higher
+    import plone.app.upgrade
+    HAS_PLONE4 = True
+except ImportError:
+    HAS_PLONE4 = False
