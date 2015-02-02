@@ -5,6 +5,8 @@ CHANGES
 1.8 (unreleased)
 ----------------
 
+- Fix install method to correctly detect Plone 4.x versions.
+
 - Use getpaid.hurry.workflow for compatibility with other updated getpaid packages.
   [davisagli]
 
